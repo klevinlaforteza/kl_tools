@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>klToolsWindow</class>
+ <widget class="QMainWindow" name="klToolsWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>KL Tools</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="mayaWindows_grp">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>257</width>
+      <height>85</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Maya Windows</string>
+    </property>
+    <layout class="QGridLayout" name="mayaWindows_grid_layout">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="scriptEditor_btn">
+       <property name="text">
+        <string>Script</string>
+       </property>
+       <property name="+c" stdset="0">
+        <string>&quot;kl_tools.scripts.kl_general.mayaWindow('ScriptEditor')&quot;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="graphEditor_btn">
+       <property name="text">
+        <string>Graph</string>
+       </property>
+       <property name="+c" stdset="0">
+        <string>&quot;kl_tools.scripts.kl_general.mayaWindow('GraphEditor')&quot;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="connectionEditor_btn">
+       <property name="text">
+        <string>Connection</string>
+       </property>
+       <property name="+c" stdset="0">
+        <string>&quot;kl_tools.scripts.kl_general.mayaWindow('ConnectionEditor')&quot;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="nodeEditor_btn">
+       <property name="text">
+        <string>Node</string>
+       </property>
+       <property name="+c" stdset="0">
+        <string>&quot;kl_tools.scripts.kl_general.mayaWindow('NodeEditorWindow')&quot;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="setEditor_btn">
+       <property name="text">
+        <string>Sets</string>
+       </property>
+       <property name="+c" stdset="0">
+        <string>&quot;kl_tools.scripts.kl_general.mayaWindow('SetEditor')&quot;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="componentEditor_btn">
+       <property name="text">
+        <string>Component</string>
+       </property>
+       <property name="+c" stdset="0">
+        <string>&quot;kl_tools.scripts.kl_general.mayaWindow('ComponentEditor')&quot;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="shapeTools_grp">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>186</width>
+      <height>85</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Shape Tools</string>
+    </property>
+    <layout class="QGridLayout" name="shapeTools_grid_layout">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="hideShape_btn">
+       <property name="text">
+        <string>Hide Shapes</string>
+       </property>
+       <property name="+c" stdset="0">
+        <string>&quot;kl_tools.scripts.kl_general.shapeShowHide()&quot;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="showShape_btn">
+       <property name="text">
+        <string>Show Shapes</string>
+       </property>
+       <property name="+c" stdset="0">
+        <string>&quot;kl_tools.scripts.kl_general.shapeShowHide(True)&quot;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="addShape_btn">
+       <property name="text">
+        <string>Add Shapes</string>
+       </property>
+       <property name="+c" stdset="0">
+        <string>&quot;kl_tools.scripts.kl_general.addShape()&quot;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="renameShape_btn">
+       <property name="text">
+        <string>Rename Shapes</string>
+       </property>
+       <property name="+c" stdset="0">
+        <string>&quot;kl_tools.scripts.kl_general.renameShape()&quot;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="jointSize_grp">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>270</y>
+      <width>233</width>
+      <height>56</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Joint Tools</string>
+    </property>
+    <layout class="QGridLayout" name="jointSize_grid_layout">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="jointSize_btn">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>Joint Size</string>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <property name="+c" stdset="0">
+        <string>&quot;kl_tools.scripts.kl_jointTools.jointDisplay()&quot;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QSpinBox" name="jointSize_sbx">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>10</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QSlider" name="jointSize_sld">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>10</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="invertedAppearance">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>jointSize_sbx</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>jointSize_sld</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>89</x>
+     <y>331</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>213</x>
+     <y>323</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jointSize_sld</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>jointSize_sbx</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>267</x>
+     <y>319</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>90</x>
+     <y>336</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jointSize_sld</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>jointSize_btn</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>304</x>
+     <y>316</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>229</x>
+     <y>381</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
