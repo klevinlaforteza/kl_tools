@@ -6,972 +6,939 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>882</width>
-    <height>600</height>
+    <width>310</width>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>KL Tools</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QGroupBox" name="jointSize_grp">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>490</y>
-      <width>233</width>
-      <height>56</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Joint Tools</string>
-    </property>
-    <layout class="QGridLayout" name="jointSize_grid">
-     <item row="0" column="0">
-      <widget class="QPushButton" name="jointSize_btn">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="text">
-        <string>Joint Size</string>
-       </property>
-       <property name="default">
-        <bool>false</bool>
-       </property>
-       <property name="flat">
-        <bool>true</bool>
-       </property>
-       <property name="+c" stdset="0">
-        <string>&quot;kl_tools.utils.kl_jointTools.joint_display()&quot;</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QSpinBox" name="jointSize_sbx">
-       <property name="minimum">
-        <number>1</number>
-       </property>
-       <property name="maximum">
-        <number>100</number>
-       </property>
-       <property name="value">
-        <number>10</number>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QSlider" name="jointSize_sld">
-       <property name="minimum">
-        <number>1</number>
-       </property>
-       <property name="maximum">
-        <number>100</number>
-       </property>
-       <property name="value">
-        <number>10</number>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="invertedAppearance">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QTabWidget" name="tabWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>290</width>
-      <height>262</height>
-     </rect>
-    </property>
-    <property name="tabShape">
-     <enum>QTabWidget::Triangular</enum>
-    </property>
-    <property name="currentIndex">
-     <number>1</number>
-    </property>
-    <widget class="QWidget" name="general_tab">
-     <attribute name="title">
-      <string>General</string>
-     </attribute>
-     <layout class="QGridLayout" name="general_tab_grid">
-      <item row="0" column="0">
-       <widget class="QGroupBox" name="mayaWindows_grp">
-        <property name="title">
-         <string>Maya Windows</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <layout class="QGridLayout" name="mayaWindows_grid">
-         <item row="0" column="0">
-          <widget class="QPushButton" name="scriptEditor_btn">
-           <property name="text">
-            <string>Script</string>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_general.maya_window('ScriptEditor')&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QPushButton" name="graphEditor_btn">
-           <property name="text">
-            <string>Graph</string>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_general.maya_window('GraphEditor')&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QPushButton" name="connectionEditor_btn">
-           <property name="text">
-            <string>Connection</string>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_general.maya_window('ConnectionEditor')&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QPushButton" name="nodeEditor_btn">
-           <property name="text">
-            <string>Node</string>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_general.maya_window('NodeEditorWindow')&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QPushButton" name="setEditor_btn">
-           <property name="text">
-            <string>Sets</string>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_general.maya_window('SetEditor')&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <widget class="QPushButton" name="componentEditor_btn">
-           <property name="text">
-            <string>Component</string>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_general.maya_window('ComponentEditor')&quot;</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="controls_tab">
-     <attribute name="title">
-      <string>Controls</string>
-     </attribute>
-     <layout class="QGridLayout" name="controls_tab_grid">
-      <item row="2" column="0">
-       <widget class="QGroupBox" name="shapeTools_grp">
-        <property name="title">
-         <string>Shape Tools</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <layout class="QGridLayout" name="shapeTools_grid">
-         <item row="0" column="0">
-          <widget class="QPushButton" name="hideShape_btn">
-           <property name="text">
-            <string>Hide Shapes</string>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.shape_show()&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QPushButton" name="showShape_btn">
-           <property name="text">
-            <string>Show Shapes</string>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.shape_show(True)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QPushButton" name="addShape_btn">
-           <property name="text">
-            <string>Add Shapes</string>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.shape_add()&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QPushButton" name="renameShape_btn">
-           <property name="text">
-            <string>Rename Shapes</string>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.shape_rename()&quot;</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QGroupBox" name="colorOverride_grp">
-        <property name="maximumSize">
-         <size>
-          <width>266</width>
-          <height>64</height>
-         </size>
-        </property>
-        <property name="title">
-         <string>Color Override</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <layout class="QGridLayout" name="colorOverride_grid">
-         <property name="leftMargin">
-          <number>5</number>
-         </property>
-         <property name="topMargin">
-          <number>10</number>
-         </property>
-         <property name="rightMargin">
-          <number>5</number>
-         </property>
-         <property name="bottomMargin">
-          <number>5</number>
-         </property>
-         <property name="spacing">
-          <number>0</number>
-         </property>
-         <item row="0" column="9">
-          <widget class="QPushButton" name="colorOverride_10_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(200, 0, 200);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(9)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="6">
-          <widget class="QPushButton" name="colorOverride_07_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(0, 0, 255);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(6)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="10">
-          <widget class="QPushButton" name="colorOverride_11_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(138, 72, 51);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(10)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="3">
-          <widget class="QPushButton" name="colorOverride_04_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(153, 153, 153);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(3)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="14">
-          <widget class="QPushButton" name="colorOverride_15_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(0, 255, 0);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(14)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QPushButton" name="colorOverride_03_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(64, 64, 64);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(2)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="5">
-          <widget class="QPushButton" name="colorOverride_06_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(0, 4, 96);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(5)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="12">
-          <widget class="QPushButton" name="colorOverride_13_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(153, 38, 0);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(12)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="13">
-          <widget class="QPushButton" name="colorOverride_14_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(255, 0, 0);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(13)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="15">
-          <widget class="QPushButton" name="colorOverride_16_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(0, 65, 153);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(15)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="7">
-          <widget class="QPushButton" name="colorOverride_08_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(0, 70, 25);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(7)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="4">
-          <widget class="QPushButton" name="colorOverride_05_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(155, 0, 40);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(4)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="11">
-          <widget class="QPushButton" name="colorOverride_12_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(63, 35, 31);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(11)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QPushButton" name="colorOverride_01_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.45 rgba(178, 178, 178, 255), stop:0.49 rgba(229, 229, 229, 255), stop:0.51 rgba(128, 128, 128, 255), stop:0.55 rgba(178, 178, 178, 255));</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(0)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QPushButton" name="colorOverride_02_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(0, 0, 0);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(1)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="8">
-          <widget class="QPushButton" name="colorOverride_09_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(38, 0, 67);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(8)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QPushButton" name="colorOverride_17_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(255, 255, 255);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(16)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QPushButton" name="colorOverride_18_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(255, 255, 0);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(17)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <widget class="QPushButton" name="colorOverride_19_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(100, 220, 255);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(18)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="3">
-          <widget class="QPushButton" name="colorOverride_20_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(67, 255, 163);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(19)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="4">
-          <widget class="QPushButton" name="colorOverride_21_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(255, 176, 176);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(20)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="5">
-          <widget class="QPushButton" name="colorOverride_22_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(228, 172, 121);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(21)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="6">
-          <widget class="QPushButton" name="colorOverride_23_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(255, 255, 99);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(22)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="7">
-          <widget class="QPushButton" name="colorOverride_24_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(0, 153, 84);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(23)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="8">
-          <widget class="QPushButton" name="colorOverride_25_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(161, 106, 48);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(24)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="9">
-          <widget class="QPushButton" name="colorOverride_26_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(158, 161, 48);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(25)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="10">
-          <widget class="QPushButton" name="colorOverride_27_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(104, 161, 48);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(26)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="11">
-          <widget class="QPushButton" name="colorOverride_28_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(48, 161, 93);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(27)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="12">
-          <widget class="QPushButton" name="colorOverride_29_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(48, 161, 161);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(28)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="13">
-          <widget class="QPushButton" name="colorOverride_30_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(48, 103, 161);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(29)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="14">
-          <widget class="QPushButton" name="colorOverride_31_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(111, 48, 161);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(30)&quot;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="15">
-          <widget class="QPushButton" name="colorOverride_32_btn">
-           <property name="maximumSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(161, 48, 106);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="+c" stdset="0">
-            <string>&quot;kl_tools.utils.kl_controls.color_override(31)&quot;</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-        <zorder>colorOverride_01_btn</zorder>
-        <zorder>colorOverride_02_btn</zorder>
-        <zorder>colorOverride_03_btn</zorder>
-        <zorder>colorOverride_04_btn</zorder>
-        <zorder>colorOverride_05_btn</zorder>
-        <zorder>colorOverride_06_btn</zorder>
-        <zorder>colorOverride_07_btn</zorder>
-        <zorder>colorOverride_08_btn</zorder>
-        <zorder>colorOverride_09_btn</zorder>
-        <zorder>colorOverride_10_btn</zorder>
-        <zorder>colorOverride_11_btn</zorder>
-        <zorder>colorOverride_12_btn</zorder>
-        <zorder>colorOverride_13_btn</zorder>
-        <zorder>colorOverride_14_btn</zorder>
-        <zorder>colorOverride_15_btn</zorder>
-        <zorder>colorOverride_16_btn</zorder>
-        <zorder>colorOverride_17_btn</zorder>
-        <zorder>colorOverride_18_btn</zorder>
-        <zorder>colorOverride_19_btn</zorder>
-        <zorder>colorOverride_20_btn</zorder>
-        <zorder>colorOverride_21_btn</zorder>
-        <zorder>colorOverride_22_btn</zorder>
-        <zorder>colorOverride_23_btn</zorder>
-        <zorder>colorOverride_24_btn</zorder>
-        <zorder>colorOverride_25_btn</zorder>
-        <zorder>colorOverride_26_btn</zorder>
-        <zorder>colorOverride_27_btn</zorder>
-        <zorder>colorOverride_28_btn</zorder>
-        <zorder>colorOverride_29_btn</zorder>
-        <zorder>colorOverride_30_btn</zorder>
-        <zorder>colorOverride_31_btn</zorder>
-        <zorder>colorOverride_32_btn</zorder>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QGroupBox" name="controlCurves_grp">
-        <property name="title">
-         <string>Control Curves</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <layout class="QGridLayout" name="controlCurves_grid">
-         <item row="0" column="0">
-          <layout class="QHBoxLayout" name="textCurve_layout">
-           <item>
-            <widget class="QLineEdit" name="textCurve_text"/>
-           </item>
-           <item>
-            <widget class="QPushButton" name="textCurve_btn">
+   <property name="minimumSize">
+    <size>
+     <width>310</width>
+     <height>500</height>
+    </size>
+   </property>
+   <layout class="QGridLayout" name="central_grid">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="general_tab">
+       <attribute name="title">
+        <string>General</string>
+       </attribute>
+       <layout class="QGridLayout" name="general_tab_grid">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="mayaWindows_grp">
+          <property name="title">
+           <string>Maya Windows</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <layout class="QGridLayout" name="mayaWindows_grid">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="scriptEditor_btn">
              <property name="text">
-              <string>Create Text</string>
+              <string>Script</string>
              </property>
              <property name="+c" stdset="0">
-              <string>&quot;kl_tools.utils.kl_controls.text_curve()&quot;</string>
+              <string>&quot;kl_tools.utils.kl_general.maya_window('ScriptEditor')&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="graphEditor_btn">
+             <property name="text">
+              <string>Graph</string>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_general.maya_window('GraphEditor')&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="connectionEditor_btn">
+             <property name="text">
+              <string>Connection</string>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_general.maya_window('ConnectionEditor')&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="nodeEditor_btn">
+             <property name="text">
+              <string>Node</string>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_general.maya_window('NodeEditorWindow')&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="setEditor_btn">
+             <property name="text">
+              <string>Sets</string>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_general.maya_window('SetEditor')&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="componentEditor_btn">
+             <property name="text">
+              <string>Component</string>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_general.maya_window('ComponentEditor')&quot;</string>
              </property>
             </widget>
            </item>
           </layout>
-         </item>
-        </layout>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="controls_tab">
+       <attribute name="title">
+        <string>Controls</string>
+       </attribute>
+       <layout class="QGridLayout" name="controls_tab_grid">
+        <item row="2" column="0">
+         <widget class="QGroupBox" name="shapeTools_grp">
+          <property name="title">
+           <string>Shape Tools</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <layout class="QGridLayout" name="shapeTools_grid">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="hideShape_btn">
+             <property name="text">
+              <string>Hide Shapes</string>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.shape_show()&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="showShape_btn">
+             <property name="text">
+              <string>Show Shapes</string>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.shape_show(True)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="addShape_btn">
+             <property name="text">
+              <string>Add Shapes</string>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.shape_add()&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="renameShape_btn">
+             <property name="text">
+              <string>Rename Shapes</string>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.shape_rename()&quot;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="controlCurves_grp">
+          <property name="title">
+           <string>Control Curves</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <layout class="QGridLayout" name="controlCurves_grid">
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="textCurve_layout">
+             <item>
+              <widget class="QLineEdit" name="textCurve_text"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="textCurve_btn">
+               <property name="text">
+                <string>Create Text</string>
+               </property>
+               <property name="+c" stdset="0">
+                <string>&quot;kl_tools.utils.kl_controls.text_curve()&quot;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="colorOverride_grp">
+          <property name="maximumSize">
+           <size>
+            <width>266</width>
+            <height>64</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Color Override</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <layout class="QGridLayout" name="colorOverride_grid">
+           <property name="leftMargin">
+            <number>5</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>5</number>
+           </property>
+           <property name="bottomMargin">
+            <number>5</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="9">
+            <widget class="QPushButton" name="colorOverride_10_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(200, 0, 200);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(9)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="6">
+            <widget class="QPushButton" name="colorOverride_07_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 0, 255);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(6)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="10">
+            <widget class="QPushButton" name="colorOverride_11_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(138, 72, 51);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(10)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QPushButton" name="colorOverride_04_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(153, 153, 153);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(3)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="14">
+            <widget class="QPushButton" name="colorOverride_15_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 255, 0);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(14)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="colorOverride_03_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(64, 64, 64);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(2)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5">
+            <widget class="QPushButton" name="colorOverride_06_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 4, 96);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(5)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="12">
+            <widget class="QPushButton" name="colorOverride_13_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(153, 38, 0);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(12)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="13">
+            <widget class="QPushButton" name="colorOverride_14_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(13)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="15">
+            <widget class="QPushButton" name="colorOverride_16_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 65, 153);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(15)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="7">
+            <widget class="QPushButton" name="colorOverride_08_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 70, 25);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(7)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="colorOverride_05_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(155, 0, 40);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(4)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="11">
+            <widget class="QPushButton" name="colorOverride_12_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(63, 35, 31);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(11)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QPushButton" name="colorOverride_01_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.45 rgba(178, 178, 178, 255), stop:0.49 rgba(229, 229, 229, 255), stop:0.51 rgba(128, 128, 128, 255), stop:0.55 rgba(178, 178, 178, 255));</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(0)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="colorOverride_02_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(1)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="8">
+            <widget class="QPushButton" name="colorOverride_09_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(38, 0, 67);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(8)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="colorOverride_17_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(16)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="colorOverride_18_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 0);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(17)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="colorOverride_19_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(100, 220, 255);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(18)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QPushButton" name="colorOverride_20_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(67, 255, 163);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(19)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="colorOverride_21_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 176, 176);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(20)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="5">
+            <widget class="QPushButton" name="colorOverride_22_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(228, 172, 121);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(21)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="6">
+            <widget class="QPushButton" name="colorOverride_23_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 99);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(22)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="7">
+            <widget class="QPushButton" name="colorOverride_24_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 153, 84);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(23)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="8">
+            <widget class="QPushButton" name="colorOverride_25_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(161, 106, 48);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(24)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="9">
+            <widget class="QPushButton" name="colorOverride_26_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(158, 161, 48);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(25)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="10">
+            <widget class="QPushButton" name="colorOverride_27_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(104, 161, 48);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(26)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="11">
+            <widget class="QPushButton" name="colorOverride_28_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(48, 161, 93);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(27)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="12">
+            <widget class="QPushButton" name="colorOverride_29_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(48, 161, 161);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(28)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="13">
+            <widget class="QPushButton" name="colorOverride_30_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(48, 103, 161);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(29)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="14">
+            <widget class="QPushButton" name="colorOverride_31_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(111, 48, 161);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(30)&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="15">
+            <widget class="QPushButton" name="colorOverride_32_btn">
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(161, 48, 106);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_controls.color_override(31)&quot;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+          <zorder>colorOverride_01_btn</zorder>
+          <zorder>colorOverride_02_btn</zorder>
+          <zorder>colorOverride_03_btn</zorder>
+          <zorder>colorOverride_04_btn</zorder>
+          <zorder>colorOverride_05_btn</zorder>
+          <zorder>colorOverride_06_btn</zorder>
+          <zorder>colorOverride_07_btn</zorder>
+          <zorder>colorOverride_08_btn</zorder>
+          <zorder>colorOverride_09_btn</zorder>
+          <zorder>colorOverride_10_btn</zorder>
+          <zorder>colorOverride_11_btn</zorder>
+          <zorder>colorOverride_12_btn</zorder>
+          <zorder>colorOverride_13_btn</zorder>
+          <zorder>colorOverride_14_btn</zorder>
+          <zorder>colorOverride_15_btn</zorder>
+          <zorder>colorOverride_16_btn</zorder>
+          <zorder>colorOverride_17_btn</zorder>
+          <zorder>colorOverride_18_btn</zorder>
+          <zorder>colorOverride_19_btn</zorder>
+          <zorder>colorOverride_20_btn</zorder>
+          <zorder>colorOverride_21_btn</zorder>
+          <zorder>colorOverride_22_btn</zorder>
+          <zorder>colorOverride_23_btn</zorder>
+          <zorder>colorOverride_24_btn</zorder>
+          <zorder>colorOverride_25_btn</zorder>
+          <zorder>colorOverride_26_btn</zorder>
+          <zorder>colorOverride_27_btn</zorder>
+          <zorder>colorOverride_28_btn</zorder>
+          <zorder>colorOverride_29_btn</zorder>
+          <zorder>colorOverride_30_btn</zorder>
+          <zorder>colorOverride_31_btn</zorder>
+          <zorder>colorOverride_32_btn</zorder>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QGroupBox" name="jointSize_grp">
+          <property name="title">
+           <string>Joint Tools</string>
+          </property>
+          <layout class="QGridLayout" name="jointSize_grid">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>5</number>
+           </property>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="pushButton">
+             <property name="text">
+              <string>Reset</string>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_jointTools.joint_display_reset()&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QPushButton" name="jointSize_btn">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="text">
+              <string>Joint Size</string>
+             </property>
+             <property name="default">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
+             </property>
+             <property name="+c" stdset="0">
+              <string>&quot;kl_tools.utils.kl_jointTools.joint_display()&quot;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSlider" name="jointSize_sld">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>10</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="invertedAppearance">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
  <connections>
-  <connection>
-   <sender>jointSize_sbx</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>jointSize_sld</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>620</x>
-     <y>533</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>722</x>
-     <y>534</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>jointSize_sld</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>jointSize_sbx</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>722</x>
-     <y>534</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>621</x>
-     <y>533</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>jointSize_sld</sender>
    <signal>valueChanged(int)</signal>
@@ -979,12 +946,28 @@
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>722</x>
-     <y>534</y>
+     <x>204</x>
+     <y>327</y>
     </hint>
     <hint type="destinationlabel">
-     <x>584</x>
-     <y>535</y>
+     <x>96</x>
+     <y>328</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>jointSize_sld</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>269</x>
+     <y>312</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>176</x>
+     <y>313</y>
     </hint>
    </hints>
   </connection>

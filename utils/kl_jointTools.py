@@ -15,3 +15,16 @@ def joint_display():
 
     # Set the joint display size
     mc.jointDisplayScale(joint_size)
+
+
+def joint_display_reset():
+
+    """
+    -----------------------------------------------------------------------------------------------------
+    This function resets the joint display size to default setting
+    :return:
+    -----------------------------------------------------------------------------------------------------
+    """
+
+    mc.intSlider("jointSize_sld", edit=True, value=10)
+    mc.jointDisplayScale(1)
